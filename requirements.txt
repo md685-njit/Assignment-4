@@ -1,0 +1,7 @@
+# Tested together on Python 3.11, 3.12 and 3.13 in October 2026. Supported: Python 3.11 to 3.13.
+# The first four are the same versions as Assignment 2.
+anthropic==1.7.0
+openai==3.16.2
+python-dotenv==1.2.3
+pytest==9.1.1
+mcp==2.3.0
