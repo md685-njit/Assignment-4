@@ -37,15 +37,38 @@ Your prompt now starts with `(.venv)`. Turn it on again in every new terminal.
 
     pip install -r requirements.txt
 
-**4. Add your key.** Copy the settings file:
+**4. Create two settings files.** The repository does not include them, so make them
+yourself in the top folder of the repository.
 
-    cp .env.example .env          (macOS and Linux)
-    copy .env.example .env        (Windows)
+First, `.gitignore`. It keeps your key and your virtual environment out of GitHub. Create
+a file named `.gitignore` with these lines:
 
-Open `.env` and paste your key after `ANTHROPIC_API_KEY=` or after `OPENAI_API_KEY=`.
-Paste only one; the code uses whichever you paste. Leave `AI_MODEL` blank to use the
-default model. You may copy your `.env` from Assignment 2 instead, but update the two
-prices in Part 0: the default model has changed.
+    .env
+    .venv/
+    __pycache__/
+    *.pyc
+    .pytest_cache/
+
+Then `.env`. It holds your key and settings. Create a file named `.env` with these lines:
+
+    ANTHROPIC_API_KEY=
+    OPENAI_API_KEY=
+    AI_PROVIDER=
+    AI_MODEL=
+    PRICE_INPUT_PER_MTOK=
+    PRICE_OUTPUT_PER_MTOK=
+
+Paste your key after `ANTHROPIC_API_KEY=` or after `OPENAI_API_KEY=`. Paste only one; the
+code uses whichever you paste. Leave `AI_PROVIDER` and `AI_MODEL` blank to use the
+default model. You fill in the two prices in Part 0 of the handout. You may copy your
+`.env` from Assignment 2 instead, but update the two prices: the default model has
+changed.
+
+On Windows, Notepad may save these as `.gitignore.txt` and `.env.txt`. Choose "All files"
+as the file type when you save, or create them in your code editor.
+
+Now run `git status`. `.gitignore` should be listed and `.env` should not. If `.env` is
+listed, fix the spelling in `.gitignore` before you commit anything.
 
 **5. Check everything.**
 
