@@ -472,7 +472,8 @@ to open it. It must contain:
 - `evidence/terminal_mcp.md`, `evidence/review.md` and `evidence/fixer.md`
 - `REPORT.md`, `LEDGER.md` and `prompts/`
 
-Never commit `.env`; it holds your key. `.gitignore` already leaves it out.
+Never commit `.env`; it holds your key. The `.gitignore` you created in README.md,
+"Setup", step 4, leaves it out.
 
 ## How it is graded
 
